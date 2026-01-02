@@ -1,0 +1,441 @@
+id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+name: Power Grid Failure Prediction
+type: 1
+canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+blocks:
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Provides real-time and batch failure prediction with confidence scoring
+    using ensemble models and physics-based feature engineering
+  height: 1000
+  id: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Real-Time Inference & Batch Prediction Engine
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 18000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Trains logistic regression on physics-based electrical features to
+    predict equipment failure; evaluates with accuracy, precision, recall, F1, ROC-AUC;
+    visualizes top 15 feature importance coefficients.
+  height: 1000
+  id: 5e390c23-4bae-46cf-a77d-ac2e2495f129
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Physics-Based Failure Prediction Model
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Tracks failure prediction model performance with drift detection, inference
+    metrics, and error logging for production monitoring
+  height: 1000
+  id: 661a75f3-35f9-40ee-a0c7-1312f60d86bc
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Model Monitoring & Performance Tracking
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Simulates production API endpoints for equipment failure prediction
+    with comprehensive input validation, risk scoring, health checks, and JSON response
+    formatting for real-time predictions
+  height: 1000
+  id: 6ffdfe40-fc32-4425-8d43-a9250e256ef6
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: API Prediction Endpoint
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 2800
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Derives 15+ electrical physics features including power, thermal dissipation,
+    voltage stability, and system health score for grid failure prediction
+  height: 1000
+  id: 82f5f254-9c79-4570-97d0-14a917695151
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Physics-Based Feature Engineering
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Packages trained models and dependencies into AWS Lambda deployment
+    artifact with handler, config, and documentation
+  height: 1000
+  id: 8e40f0aa-f8fc-4a66-ab85-9fc0e86829f9
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Lambda Deployment Package Builder
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 20000
+  y: 4200
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Defines equipment failure target using physics thresholds (temperature,
+    voltage, current) and prepares model-ready dataset with 70 features for predictive
+    maintenance
+  height: 1000
+  id: 9a47a88c-2fe1-4cee-aa48-843441717627
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Create Target Variable & Prepare Data
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 10000
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Removes duplicate timestamps, handles missing values, and caps extreme
+    outliers while validating sensor ranges
+  height: 1000
+  id: a48581e2-d00e-41d2-aa10-69249dde51ec
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Data Cleaning & Preprocessing
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Serializes and versions trained ML models with metadata for production
+    deployment, including physics & gradient boosting models with performance metrics
+  height: 1000
+  id: abf0b8b6-1bad-4cc8-b127-4b9cc0709c9a
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Model Versioning & Serialization
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 16000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Combines physics-based and gradient boosting model predictions into
+    hybrid ensemble with 40/60 weights, evaluates performance with accuracy/precision/recall/F1/ROC-AUC
+    metrics, visualizes comparison
+  height: 1000
+  id: ad9c3cb7-fbb4-44fe-bd17-327963a75346
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: LSTM Time-Series Model & Ensemble
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 14000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Generates 30 days of synthetic electric grid telemetry data with voltage,
+    current, temperature, and load factor metrics at 15-minute intervals, including
+    5% anomalies.
+  height: 1000
+  id: c67794c1-5db8-4bb1-8dc3-0ffb5876c77e
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Load Telemetry Data
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Trains gradient boosting model on 70 physics + ML features to predict
+    grid failures with 99.65% test accuracy
+  height: 1000
+  id: c75115ea-ae77-4c28-94f5-54319b9abfb0
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Gradient Boosting ML Model
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 12000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Summarizes final 72-feature ML dataset with physics, time, and statistical
+    features; logs quality metrics and sample data
+  height: 1000
+  id: d4d742a4-805f-4757-93b0-851673b8489c
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Final Dataset Summary & Export
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 0
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Displays real-time equipment failure risk with 6-panel visualization
+    dashboard (risk gauge, live telemetry, model contributions, risk distribution,
+    performance metrics, alerts)
+  height: 1000
+  id: d646f559-a32b-451d-9e1f-7e0c7fecd1d0
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Real-Time Risk Visualization Dashboard
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings: null
+  description: Documents interactive dashboard for equipment failure prediction with
+    real-time risk visualization, model monitoring, historical analysis, manual predictions,
+    and explainability features
+  height: 1000
+  id: d8ac09c6-f5a3-4dcf-98c8-05ffb768a7ee
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Dashboard Documentation
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 0
+  y: 4400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Generates AWS deployment automation including Lambda function creation,
+    API Gateway configuration, IAM roles, and provides CLI and Boto3 deployment scripts
+    with testing guides
+  height: 1000
+  id: d8e95324-102e-4135-8ede-881cf57178b3
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: AWS Deployment Automation Script
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 22000
+  y: 4200
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Generates interactive Streamlit app for equipment failure monitoring
+    with live telemetry controls, risk gauge, sensor history visualization, model
+    contribution breakdown, and auto-refresh capability
+  height: 1000
+  id: ea8181f9-e604-4810-a970-abc308be469f
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: Streamlit Equipment Monitoring App
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 24000
+  y: 1400
+- auto_size: false
+  canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: 'Engineers ML-ready features: time-based, rolling statistics, lag,
+    rate of change, anomaly flags, interactions, and volatility indicators for power
+    grid failure prediction'
+  height: 1000
+  id: f63a94a6-ed9d-46d3-a6bf-193d17e07b79
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  name: ML Feature Engineering
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 0
+edges:
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 05e3576e-5acd-4f0c-9ab6-d094c8d91599
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
+  target: 8e40f0aa-f8fc-4a66-ab85-9fc0e86829f9
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 0daa3dd8-4ad1-4c57-ba6d-663ca33200fd
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 9a47a88c-2fe1-4cee-aa48-843441717627
+  target: c75115ea-ae77-4c28-94f5-54319b9abfb0
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 149fda73-4615-4e65-a861-3f4d7c042865
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 82f5f254-9c79-4570-97d0-14a917695151
+  target: f63a94a6-ed9d-46d3-a6bf-193d17e07b79
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 16f3ad25-b29e-4684-85ce-b136c8cd0912
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: c67794c1-5db8-4bb1-8dc3-0ffb5876c77e
+  target: a48581e2-d00e-41d2-aa10-69249dde51ec
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 1c647106-3eda-40e0-bd88-313a5f14faf2
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: a48581e2-d00e-41d2-aa10-69249dde51ec
+  target: 82f5f254-9c79-4570-97d0-14a917695151
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 322238d7-4868-43fb-8b9e-92327a33ea71
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: f63a94a6-ed9d-46d3-a6bf-193d17e07b79
+  target: d4d742a4-805f-4757-93b0-851673b8489c
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 32dd3463-07f3-4dbf-81bf-d39de22d0111
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: d646f559-a32b-451d-9e1f-7e0c7fecd1d0
+  target: ea8181f9-e604-4810-a970-abc308be469f
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 42705084-3b2e-4042-9693-312ce258a495
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: ad9c3cb7-fbb4-44fe-bd17-327963a75346
+  target: abf0b8b6-1bad-4cc8-b127-4b9cc0709c9a
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 6b0898fb-89c5-4c64-b626-6d83c5876d8f
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: c75115ea-ae77-4c28-94f5-54319b9abfb0
+  target: ad9c3cb7-fbb4-44fe-bd17-327963a75346
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 8153a730-ccba-48f8-8a2b-a407a2064a11
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 9a47a88c-2fe1-4cee-aa48-843441717627
+  target: 5e390c23-4bae-46cf-a77d-ac2e2495f129
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: 9980fd9c-28a3-4b0e-9e17-2cada36aab1b
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
+  target: 6ffdfe40-fc32-4425-8d43-a9250e256ef6
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: cbbdd2c1-38e0-4924-991e-684dc4010511
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 661a75f3-35f9-40ee-a0c7-1312f60d86bc
+  target: d646f559-a32b-451d-9e1f-7e0c7fecd1d0
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: d396166d-80b4-4660-a382-af42d20ff437
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
+  target: 661a75f3-35f9-40ee-a0c7-1312f60d86bc
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: dc434d2a-e03a-4c85-8022-07aed1c41bac
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 5e390c23-4bae-46cf-a77d-ac2e2495f129
+  target: ad9c3cb7-fbb4-44fe-bd17-327963a75346
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: eb399d5c-0e74-402d-a050-af9f13b4c19d
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: abf0b8b6-1bad-4cc8-b127-4b9cc0709c9a
+  target: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: f2e1260f-f42c-4a87-a2b8-b99eee3fca7b
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: 8e40f0aa-f8fc-4a66-ab85-9fc0e86829f9
+  target: d8e95324-102e-4135-8ede-881cf57178b3
+- canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+  id: fae38dc6-9f28-4e4f-a909-728b42bdca59
+  layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+  source: d4d742a4-805f-4757-93b0-851673b8489c
+  target: 9a47a88c-2fe1-4cee-aa48-843441717627
