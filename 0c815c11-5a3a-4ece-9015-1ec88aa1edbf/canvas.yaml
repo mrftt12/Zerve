@@ -16,6 +16,25 @@ layers:
     compute_settings:
       compute_environment_type: 1
       executor_image_id: null
+    description: Packages ML models, Lambda handler, and configuration into deployment-ready
+      ZIP archive
+    height: 1000
+    id: 3af682d6-3c3f-45a7-88b1-8a6715e9d5a2
+    layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+    name: Create Lambda Deployment ZIP Package
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 22000
+    y: 5600
+  - auto_size: false
+    canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+    compute_settings:
+      compute_environment_type: 1
+      executor_image_id: null
     description: Provides real-time and batch failure prediction with confidence scoring
       using ensemble models and physics-based feature engineering
     height: 1000
@@ -24,7 +43,7 @@ layers:
     name: Real-Time Inference & Batch Prediction Engine
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -44,7 +63,7 @@ layers:
     name: Physics-Based Failure Prediction Model
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -63,12 +82,31 @@ layers:
     name: Model Monitoring & Performance Tracking
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
     x: 20000
     y: 1400
+  - auto_size: false
+    canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+    compute_settings:
+      compute_environment_type: 1
+      executor_image_id: null
+    description: Verifies AWS Lambda deployment package existence and displays file
+      metadata including size and contents for download
+    height: 1000
+    id: 6c72532c-a70a-4bcd-8d85-611dc1b8e04b
+    layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+    name: Download ZIP Package Info
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 24000
+    y: 5600
   - auto_size: false
     canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
     compute_settings:
@@ -83,7 +121,7 @@ layers:
     name: API Prediction Endpoint
     parent_id: null
     properties: {}
-    status: 1
+    status: 4
     type: 1
     variables: null
     width: 1600
@@ -102,7 +140,7 @@ layers:
     name: Physics-Based Feature Engineering
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -121,7 +159,7 @@ layers:
     name: Lambda Deployment Package Builder
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -141,7 +179,7 @@ layers:
     name: Create Target Variable & Prepare Data
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -160,7 +198,7 @@ layers:
     name: Data Cleaning & Preprocessing
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -179,7 +217,7 @@ layers:
     name: Model Versioning & Serialization
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -199,7 +237,7 @@ layers:
     name: LSTM Time-Series Model & Ensemble
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -219,7 +257,7 @@ layers:
     name: Load Telemetry Data
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -238,7 +276,7 @@ layers:
     name: Gradient Boosting ML Model
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -257,7 +295,7 @@ layers:
     name: Final Dataset Summary & Export
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -277,7 +315,7 @@ layers:
     name: Real-Time Risk Visualization Dashboard
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -315,7 +353,7 @@ layers:
     name: AWS Deployment Automation Script
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -335,7 +373,7 @@ layers:
     name: Streamlit Equipment Monitoring App
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -355,7 +393,7 @@ layers:
     name: ML Feature Engineering
     parent_id: null
     properties: {}
-    status: 1
+    status: 3
     type: 1
     variables: null
     width: 1600
@@ -409,6 +447,11 @@ layers:
     source: c75115ea-ae77-4c28-94f5-54319b9abfb0
     target: ad9c3cb7-fbb4-44fe-bd17-327963a75346
   - canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+    id: 6c2b20c0-ec1f-4a0a-92d7-c6dcfe58a1c6
+    layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+    source: 8e40f0aa-f8fc-4a66-ab85-9fc0e86829f9
+    target: 3af682d6-3c3f-45a7-88b1-8a6715e9d5a2
+  - canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
     id: 8153a730-ccba-48f8-8a2b-a407a2064a11
     layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
     source: 9a47a88c-2fe1-4cee-aa48-843441717627
@@ -418,6 +461,11 @@ layers:
     layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
     source: 54f94f38-e6f3-4189-8bec-585a2b6a5ef6
     target: 6ffdfe40-fc32-4425-8d43-a9250e256ef6
+  - canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
+    id: b0a9673d-0360-4d5e-889b-54496a50eb6b
+    layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
+    source: 3af682d6-3c3f-45a7-88b1-8a6715e9d5a2
+    target: 6c72532c-a70a-4bcd-8d85-611dc1b8e04b
   - canvas_id: 0c815c11-5a3a-4ece-9015-1ec88aa1edbf
     id: cbbdd2c1-38e0-4924-991e-684dc4010511
     layer_id: c9830a33-ff2b-40a1-a84a-e8aa1ac241a5
